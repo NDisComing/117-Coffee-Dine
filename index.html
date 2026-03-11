@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>117 Coffee Dine</title>
+
+  <!-- SEO & Meta -->
+  <meta name="description"
+    content="117 Coffee Dine - Designed Simplicity, Distinct Flavor. Minimalist luxe artisanal coffee and curated kitchen elements.">
+
+  <!-- Google Fonts: Outfit (Headers) & Roboto Mono (Prices/Desc) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Roboto+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fade-in-section">
+    <div class="nav-logo">117 Coffee Dine</div>
+    <div class="nav-actions">
+      <a href="#reservation" class="btn-reservations">RESERVATIONS</a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Hero Header -->
+  <header class="section-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in-section">
+      <h1 class="hero-title">117 Coffee Dine</h1>
+    </div>
+  </header>
+
+  <!-- Section 2: Artisanal Coffee (Carousel L->R) -->
+  <section class="section-carousel bg-charcoal text-cloud" id="coffee">
+    <div class="carousel-track track-left-to-right" id="track-coffee">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide section-split">
+        <div class="split-image image-left fade-in-section">
+          <img src="assets/coffee1.webp" alt="Artisanal swan-art latte and matcha latte on cork coasters">
+        </div>
+        <div class="split-text text-right fade-in-section">
+          <h2 class="section-title">ARTISANAL COFFEE</h2>
+          <div class="menu-list left-align">
+            <div class="menu-item">
+              <div class="menu-header">
+                <span class="menu-name">SINGLE-ORIGIN SWAN BLEND</span>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-desc">A delicate pour conveying hints of toasted hazelnut and dark cacao.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-header">
+                <span class="menu-name">MATCHA GREEN TEA</span>
+                <span class="menu-price">$6.50</span>
+              </div>
+              <p class="menu-desc">Ceremonial grade matcha whisked with oat milk and a touch of agave.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-header">
+                <span class="menu-name">POUR OVER - ETHIOPIA YIRGACHEFFE</span>
+                <span class="menu-price">$8.00</span>
+              </div>
+              <p class="menu-desc">Flora notes of jasmine and bright bergamot complexity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 (Menu Continuation) -->
+      <div class="carousel-slide section-split">
+        <div class="split-image image-left">
+          <img src="assets/coffee2.webp" alt="More coffee options" style="filter: brightness(0.7);">
+        </div>
+        <div class="split-text text-right">
+          <h2 class="section-title">SIGNATURE BREWS</h2>
+          <div class="menu-list left-align">
+            <div class="menu-item">
+              <div class="menu-header">
+                <span class="menu-name">COLD BREW RESERVE</span>
+                <span class="menu-price">$6.50</span>
+              </div>
+              <p class="menu-desc">Steeped for 18 hours, presenting notes of chocolate and sweet berries.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <span class="menu-name">ESPRESSO TONIC</span>
+                <span class="menu-price">$7.50</span>
+              </div>
+              <p class="menu-desc">A refreshing double shot poured over artisanal Indian tonic water.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls controls-coffee">
+      <button class="carousel-btn prev-btn" onclick="moveCarousel('track-coffee', -1)">&#8592; PREV</button>
+      <button class="carousel-btn next-btn" onclick="moveCarousel('track-coffee', 1)">NEXT &#8594;</button>
+    </div>
+  </section>
+
+  <!-- Section 3: Curated Kitchen (Carousel R->L) -->
+  <section class="section-carousel bg-cloud text-charcoal" id="kitchen">
+    <div class="carousel-track track-right-to-left" id="track-kitchen">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide section-split">
+        <div class="split-text text-left fade-in-section">
+          <h2 class="section-title text-right-aligned">CURATED KITCHEN</h2>
+          <div class="menu-list right-align">
+            <div class="menu-item text-right-aligned">
+              <div class="menu-header justify-end">
+                <span class="menu-name">ONSEN EGG & CHARRED SALMON BOWL</span>
+                <span class="menu-price">$24.00</span>
+              </div>
+              <p class="menu-desc">Dashi-infused quinoa, perfectly soft-boiled egg, and nori dust.</p>
+            </div>
+
+            <div class="menu-item text-right-aligned">
+              <div class="menu-header justify-end">
+                <span class="menu-name">TRUFFLE MUSHROOM TOAST</span>
+                <span class="menu-price">$18.50</span>
+              </div>
+              <p class="menu-desc">Wild seasonal mushrooms over sourdough, finished with white truffle oil.</p>
+            </div>
+
+            <div class="menu-item text-right-aligned">
+              <div class="menu-header justify-end">
+                <span class="menu-name">YUZU CITRUS CAKE</span>
+                <span class="menu-price">$12.00</span>
+              </div>
+              <p class="menu-desc">Light sponge layered with tart yuzu curd and mascarpone cream.</p>
+            </div>
+          </div>
+        </div>
+        <div class="split-image image-right fade-in-section">
+          <img src="assets/food1.webp" alt="Charred salmon and onsen egg bowl next to a grain bowl">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide section-split">
+        <div class="split-text text-left">
+          <h2 class="section-title text-right-aligned">SEASONAL PLATES</h2>
+          <div class="menu-list right-align">
+            <div class="menu-item text-right-aligned">
+              <div class="menu-header justify-end">
+                <span class="menu-name">WAGYU KATSU SANDO</span>
+                <span class="menu-price">$28.00</span>
+              </div>
+              <p class="menu-desc">Premium wagyu beef cutlet, tonkatsu sauce, milk bread.</p>
+            </div>
+            <div class="menu-item text-right-aligned">
+              <div class="menu-header justify-end">
+                <span class="menu-name">MATCHA LAVA CAKE</span>
+                <span class="menu-price">$14.00</span>
+              </div>
+              <p class="menu-desc">Warm molten center made from ceremonial matcha, served with vanilla bean ice cream.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="split-image image-right">
+          <img src="assets/food2.webp" alt="More curated kitchen items" style="filter: brightness(0.8) sepia(0.2);">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls controls-kitchen text-charcoal-btns">
+      <button class="carousel-btn prev-btn" onclick="moveCarousel('track-kitchen', -1)">&#8592; PREV</button>
+      <button class="carousel-btn next-btn" onclick="moveCarousel('track-kitchen', 1)">NEXT &#8594;</button>
+    </div>
+  </section>
+
+  <!-- Section 5: Minimalist Reservation Form (Split Screen) -->
+  <section class="section-split bg-charcoal text-cloud" id="reservation">
+    <div class="split-image image-left fade-in-section">
+      <img src="assets/full.webp" alt="Fully seated cafe interior">
+    </div>
+    <div class="split-text text-right fade-in-section" style="justify-content: center; padding-top: 4rem;">
+      <h2 class="section-title">RESERVE A TABLE</h2>
+      <p class="reservation-subtitle">Join us for a minimalist luxe experience.</p>
+
+      <form id="whatsapp-form" class="minimal-form">
+        <div class="form-group">
+          <label for="res-name">NAME</label>
+          <input type="text" id="res-name" required placeholder="Jane Doe">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="res-date">DATE</label>
+            <input type="date" id="res-date" required>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="res-time">TIME</label>
+            <input type="time" id="res-time" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-guest">GUESTS</label>
+          <input type="number" id="res-guests" min="1" max="10" required placeholder="2">
+        </div>
+
+        <button type="submit" class="btn-submit-res">BOOK VIA WHATSAPP</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Section 4: Minimal Footer -->
+  <footer class="section-footer bg-slate text-white">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>117 Coffee Dine</h3>
+        <p>A Minimalist Luxe Experience.</p>
+      </div>
+      <div class="footer-address">
+        <h4>VISIT</h4>
+        <p>L1-01, The Netizen, Cheras Perdana, </p>
+        <p> Lebuh Utama Tun Hussein Onn,</p>
+        <p>43200 Cheras, Selangor</p>
+      </div>
+      <div class="footer-contact">
+        <h4>CONNECT</h4>
+        <p><a href="mailto:hello@117coffeedine.com">hello@117coffeedine.com</a></p>
+        <p>+012 7023664</p>
+      </div>
+      <div class="footer-social">
+        <h4>SOCIAL</h4>
+        <a href="https://www.instagram.com/117_coffeedine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          class="social-link">Instagram</a>
+        <a href="#" class="social-link">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 117 Coffee Dine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
