@@ -159,7 +159,7 @@ img {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('assets/hero-interior.jpeg');
+  background-image: url('assets/hero-interior.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -633,3 +633,4 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
