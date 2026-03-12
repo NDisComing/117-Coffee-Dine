@@ -94,4 +94,38 @@ Looking forward to it!`;
     });
   }
 
+  // --- FEEDBACK FORM LOGIC ---
+  const feedbackForm = document.getElementById('feedback-form');
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const feedbackText = document.getElementById('feedback-text').value;
+
+      // TODO: Replace GOOGLE_SCRIPT_URL with your actual Google Apps Script Web App URL
+      // Example implementation:
+
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx0F6RU4gS0_gaAkRhgwBt8LBaZMear5v1QiGKe_7XM5Tfji8xghIaQApOk3yHOLIFVng/exec';
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // typical for simple google form sumbissions
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ feedback: feedbackText })
+      })
+
+
+      // Simulate successful submission
+      const statusText = document.getElementById('feedback-status');
+      statusText.style.display = 'block';
+
+      // Clear form
+      feedbackForm.reset();
+
+      // Hide success message after 4 seconds
+      setTimeout(() => {
+        statusText.style.display = 'none';
+      }, 4000);
+    });
+  }
+
 });
