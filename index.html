@@ -228,8 +228,17 @@
   <footer class="section-footer bg-slate text-white">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>117 Coffee Dine</h3>
-        <p>A Minimalist Luxe Experience.</p>
+        <h3>117 COFFEE DINE</h3>
+        <p style="margin-bottom: 2rem;">A Minimalist Luxe Experience.</p>
+        <!-- Google Map Iframe -->
+        <div class="footer-map">
+        <iframe
+          src="https://maps.google.com/maps?q=117+Coffee+Dine,+L1-01,+The+Netizen,+Cheras&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="180"
+          style="border:0; filter: grayscale(100%) invert(90%) contrast(80%); border-radius: 4px;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
       </div>
       <div class="footer-address">
         <h4>VISIT</h4>
@@ -238,9 +247,13 @@
         <p>43200 Cheras, Selangor</p>
       </div>
       <div class="footer-contact">
-        <h4>CONNECT</h4>
-        <p><a href="mailto:hello@117coffeedine.com">hello@117coffeedine.com</a></p>
-        <p>+012 7023664</p>
+        <h4>FEEDBACK</h4>
+        <form id="feedback-form" class="feedback-form">
+          <textarea id="feedback-text" placeholder="Tell us about your experience..." required rows="4"></textarea>
+          <button type="submit" class="btn-submit-feedback">SUBMIT</button>
+        </form>
+        <p id="feedback-status" style="display:none; color: #a1d99b; margin-top: 0.5rem; font-size: 0.8rem;">Feedback
+          sent successfully!</p>
       </div>
       <div class="footer-social">
         <h4>SOCIAL</h4>
